@@ -34,6 +34,9 @@ namespace Aspire.Hosting
     {
         public static ApplicationModel.IResourceBuilder<T> PublishAsAzureContainerApp<T>(this ApplicationModel.IResourceBuilder<T> project, System.Action<Azure.AzureResourceInfrastructure, global::Azure.Provisioning.AppContainers.ContainerApp> configure)
             where T : ApplicationModel.ProjectResource { throw null; }
+
+        public static ApplicationModel.IResourceBuilder<T> WithAzureAuthentication<T>(this ApplicationModel.IResourceBuilder<T> project, string clientId, string tenantId, string? clientSecretEnv = "AAD_CLIENT_SECRET")
+            where T : ApplicationModel.ProjectResource { throw null; }
     }
 
     public static partial class ContainerAppExtensions
